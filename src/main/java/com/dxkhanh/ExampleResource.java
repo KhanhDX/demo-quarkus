@@ -1,6 +1,5 @@
 package com.dxkhanh;
 
-import javax.inject.Named;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -10,8 +9,13 @@ import javax.ws.rs.core.MediaType;
 public class ExampleResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello RESTEasy";
+    @Produces(MediaType.APPLICATION_JSON)
+    public Hihi hello() {
+        Hihi hihi = new Hihi("Khanh");
+
+        System.out.println("Hello RESTEasy");
+        return hihi;
     }
+
+
 }
